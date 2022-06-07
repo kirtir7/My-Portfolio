@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="astyle.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+
+
+    <!--CODE FOR NAVBAR-->
+    <nav class="navbar">
+        <div class="content">
+          <a href="index.html" class="logo">KIRTI</a>
+          <ul class="menu-list">
+            <div class="icon cancel-btn">
+              <i class="fas fa-times"></i>
+            </div>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="#">Skills</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="#">Certificates</a></li>
+            <li><a href="#">Contact Me</a></li>
+          </ul>
+          <div class="icon menu-btn">
+            <i class="fas fa-bars"></i>
+          </div>
+        </div>
+      </nav>
+      <div class="banner"></div>
+
+
+    <!--CODE FOR ABOUT ME SECTION-->
+    <section>
+        <div class="container">
+            <div class="grid">
+                <div class="left">
+                    <img src="bad-bad.jpg" alt="">
+                </div>
+                <div class="right">
+                    <h1>I'M CUTE CATU</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore ea aperiam dicta minima dolores excepturi porro modi ad ut animi saepe, libero corrupti omnis unde earum iste voluptates veritatis voluptatibus!</p>
+                    <a href="#" class="btn">Hire Me</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <section class="one">
+            <h1>First Page</h1>
+        </section>
+    </div>
+    <!--SCRIPT FOR RESPONSIVE NAVBAR-->
+    <script>
+        const body = document.querySelector("body");
+        const navbar = document.querySelector(".navbar");
+        const menuBtn = document.querySelector(".menu-btn");
+        const cancelBtn = document.querySelector(".cancel-btn");
+        menuBtn.onclick = ()=>{
+          navbar.classList.add("show");
+          menuBtn.classList.add("hide");
+          body.classList.add("disabled");
+        }
+        cancelBtn.onclick = ()=>{
+          body.classList.remove("disabled");
+          navbar.classList.remove("show");
+          menuBtn.classList.remove("hide");
+        }
+        window.onscroll = ()=>{
+          this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+        }
+      </script>
+</body>
+</html>
